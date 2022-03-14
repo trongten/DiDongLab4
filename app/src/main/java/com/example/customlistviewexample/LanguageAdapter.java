@@ -53,37 +53,38 @@ public class LanguageAdapter extends BaseAdapter {
 
         TextView tvLanguageName = (TextView) convertView.findViewById(R.id.tvLanguageName);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.logo);
+        TextView tvLShop = (TextView) convertView.findViewById(R.id.textView2);
+
         final LinearLayout linearLayout = (LinearLayout) convertView.findViewById(R.id.idLinearLayout);
         final Language language = listLanguage.get(position);
 
         if (listLanguage != null && !listLanguage.isEmpty()) {
             tvLanguageName.setText(language.getName());
+            tvLShop.setText(language.getShop());
             int idLanguage = language.getId();
             switch (idLanguage) {
                 case 1:
-                    imageView.setImageResource(R.drawable.icon_java);
+                    imageView.setImageResource(R.drawable.ca_nau_lau);
                     break;
                 case 2:
-                    imageView.setImageResource(R.drawable.icon_android);
+                    imageView.setImageResource(R.drawable.ga_bo_toi);
                     break;
                 case 3:
-                    imageView.setImageResource(R.drawable.icon_javafx);
+                    imageView.setImageResource(R.drawable.xa_can_cau);
                     break;
                 case 4:
-                    imageView.setImageResource(R.drawable.icon_web);
+                    imageView.setImageResource(R.drawable.do_choi_dang_mo_hinh);
                     break;
                 case 5:
-                    imageView.setImageResource(R.drawable.icon_ruby);
+                    imageView.setImageResource(R.drawable.lanh_dao_gian_don);
                     break;
                 case 6:
-                    imageView.setImageResource(R.drawable.icon_c);
+                    imageView.setImageResource(R.drawable.hieu_long_con_tre);
                     break;
                 case 7:
-                    imageView.setImageResource(R.drawable.icon_php);
+                    imageView.setImageResource(R.drawable.trump);
                     break;
-                case 8:
-                    imageView.setImageResource(R.drawable.icon_wordpress);
-                    break;
+
                 default:
                     break;
             }

@@ -20,14 +20,14 @@ public class CustomListViewExampleActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.idListView);
         listLanguage = new ArrayList<>();
-        listLanguage.add(new Language(1, "Lập Trình Java"));
-        listLanguage.add(new Language(2, "Lập Trình Android"));
-        listLanguage.add(new Language(3, "Lập Trình JavaFX"));
-        listLanguage.add(new Language(4, "Lập Trình Web"));
-        listLanguage.add(new Language(5, "Lập Trình Ruby"));
-        listLanguage.add(new Language(6, "Lập Trình C++"));
-        listLanguage.add(new Language(7, "Lập Trình PHP"));
-        listLanguage.add(new Language(8, "Lập Trình WordPress"));
+        listLanguage.add(new Language(1, "Cá nấu lẩu mini","Devang"));
+        listLanguage.add(new Language(2, "!KG KHÔ GÀ BƠ TỎI..","LTD Food"));
+        listLanguage.add(new Language(3, "Xe cần cẩu đa năng","Thế giói đồ chơi"));
+        listLanguage.add(new Language(4, "Đồ chơi dạng mô hình","Thế giói đồ chơi"));
+        listLanguage.add(new Language(5, "Lãnh đạo đơn giản","Minh Long Book"));
+        listLanguage.add(new Language(6, "Hiểu lòng con trẻ","Minh Long Book"));
+        listLanguage.add(new Language(7, "Donal Trump thiên tài lãnh đạo","Minh Long Book"));
+
 
         LanguageAdapter adapter = new LanguageAdapter(this, R.layout.item_custom_list_view, listLanguage);
         listView.setAdapter(adapter);

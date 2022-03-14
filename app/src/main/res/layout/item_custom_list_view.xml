@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/idLinearLayout"
-    android:layout_height="80dp"
+    android:layout_height="95dp"
     android:layout_marginTop="1dp"
-    android:background="#FFFFFF"
+    android:background="#D5D5D5"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -14,13 +16,14 @@
         android:gravity="center"
         android:orientation="vertical"
         android:weightSum="1">
+
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
             android:contentDescription="@null"
             android:gravity="center"
-            android:src="@drawable/icon_java"/>
+            android:src="@drawable/ca_nau_lau" />
 
     </LinearLayout>
 
@@ -30,14 +33,67 @@
         android:layout_weight="1.0"
         android:orientation="vertical"
         android:weightSum="1">
-        <TextView
-            android:id="@+id/tvLanguageName"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="left|center"
-            android:text="ITEM EXAMPLE"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLanguageName"
+                android:layout_width="143dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="left|center"
+                android:text="ITEM EXAMPLE"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.141"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Shop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.072"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.042"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:autoText="false"
+                android:background="#FF0000"
+                android:text="Chat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 
 </LinearLayout>
